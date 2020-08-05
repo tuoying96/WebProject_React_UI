@@ -1,0 +1,15 @@
+/*
+api modules
+functions return promise
+ */
+
+import ajax from './ajax'
+
+// register api
+export const reqRegister = (user) => ajax('/register', user, 'POST')
+// login api
+export const reqLogin = ({username, password}) => ajax('/login',{username, password}, 'POST')
+// update user api
+export const reqUpdateUser = (user) => ajax('/update', user, 'POST')
+// get user api
+export const reqUser = () => ajax('/user')
