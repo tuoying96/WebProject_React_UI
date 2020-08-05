@@ -13,7 +13,7 @@ module.exports = function override(config, env) {
   }], config);
 
   // customize theme
-  config.module.rules[2].oneOf.unshift(
+  config.module.rules[3].oneOf.unshift(
       {
         test: /\.less$/,
         use: [
@@ -53,7 +53,7 @@ module.exports = function override(config, env) {
   );
 
   // css-modules
-  config.module.rules[2].oneOf.unshift(
+  config.module.rules[3].oneOf.unshift(
       {
         test: /\.css$/,
         exclude: /node_modules|antd-mobile\.css/,
