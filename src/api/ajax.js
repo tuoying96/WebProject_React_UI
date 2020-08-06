@@ -3,7 +3,7 @@
 函数的返回值是promise对象
  */
 import axios from 'axios'
-const baseUrl = "https://webproject-ui.herokuapp.com"
+const baseUrl = ''
 
 // const baseUrl = 'http://localhost:4000'
 export default function ajax(url, data={}, type='GET') {
