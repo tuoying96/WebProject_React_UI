@@ -22,6 +22,7 @@ const ListItem = List.Item
 
 class Register extends Component {
     state = {
+        email: '',
         username: '',  // username
         password: '',  // password
         password2: '',  // check password
@@ -60,19 +61,22 @@ class Register extends Component {
                 <WingBlank>
                     <List>
                         {msg ? <div className='error-msg'>{msg}</div> : null}
+                        <InputItem placeholder='Please enter your northeastern.edu email address' onChange={val => {this.handleChange('email', val)}}>Email:</InputItem>
                         <WhiteSpace/>
-                        <InputItem placeholder='Please input your username' onChange={val => {this.handleChange('username', val)}}>Username:</InputItem>
+                        <InputItem placeholder='Please enter your username' onChange={val => {this.handleChange('username', val)}}>Username:</InputItem>
                         <WhiteSpace/>
-                        <InputItem placeholder='Please input your password' type="password" onChange={val => {this.handleChange('password', val)}}>Password:</InputItem>
+                        <InputItem placeholder='Please enter your password' type="password" onChange={val => {this.handleChange('password', val)}}>Password:</InputItem>
                         <WhiteSpace/>
-                        <InputItem placeholder='Please re-input your username' type="password" onChange={val => {this.handleChange('password2', val)}}>Re-Password:</InputItem>
+                        <InputItem placeholder='Please re-enter your password' type="password" onChange={val => {this.handleChange('password2', val)}}>Re-Password:</InputItem>
                         <WhiteSpace/>
                         <ListItem>
-                            <span>Gender:</span>
+                            <span>Sex:</span>
                             &nbsp;&nbsp;&nbsp;
                             <Radio checked={sex==='female'} onChange={() => this.handleChange('sex', 'female')}>Girl</Radio>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <Radio checked={sex==='male'}  onClick={() => this.handleChange('sex', 'male')}>Boy</Radio>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <Radio checked={sex==='non-binary'}  onClick={() => this.handleChange('sex', 'non-binary')}>Non-binary</Radio>
                         </ListItem>
                         <WhiteSpace/>
                         <Button type='primary' onClick={this.register}>Register</Button>

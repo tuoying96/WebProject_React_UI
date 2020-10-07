@@ -13,6 +13,7 @@ import Message from '../message/message.jsx'
 import Personal from '../personal/personal.jsx'
 import Nav from '../../components/nav/nav.jsx'
 import NotFound from '../../components/not-found/not-found'
+import Chat from '../chat/chat'
 
 class Main extends Component {
 
@@ -22,14 +23,14 @@ class Main extends Component {
       component: Home,
       title: 'Find My Roommate List',
       icon: 'home',
-      text: 'home',
+      text: 'Home',
     },
     {
       path: '/message', // route path
       component: Message,
       title: 'Message',
       icon: 'message',
-      text: 'Chat',
+      text: 'Message',
     },
     {
       path: '/personal', // route path
@@ -87,6 +88,7 @@ class Main extends Component {
                 navList.map(nav => <Route key={nav.path} path={nav.path} component={nav.component}/>)
               }
               <Route path = '/info' component = {UserInfo}/>
+              <Route path = '/chat/:userid' component = {Chat}/>
               <Route component={NotFound}/>
             </Switch>
             {currentNav ? <Nav navList={navList} unReadCount={unReadCount}/> : null}
@@ -96,6 +98,6 @@ class Main extends Component {
 }
 
 export default connect(
-    state => ({user: state.user}),
+    state => ({user: state.user, unReadCount: state.chat.unReadCount}),
     {getUser}
 )(Main)

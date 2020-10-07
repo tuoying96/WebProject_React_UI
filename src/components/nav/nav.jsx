@@ -13,7 +13,7 @@ class Nav extends Component {
   }
 
   render () {
-    let {navList} = this.props //changed "let {navList, unReadCount}" in iter1, otherwise report error
+    let {navList, unReadCount} = this.props //changed "let {navList, unReadCount}" in iter1, otherwise report error
     // filter nav
     navList = navList.filter(nav => !nav.hide)
     const path = this.props.location.pathname
@@ -22,6 +22,7 @@ class Nav extends Component {
         {
           navList.map((nav) => (
             <Item key={nav.path}
+                  badge={nav.path==='/message' ? unReadCount : 0}
                   title={nav.text}
                   icon={{uri: require(`./nav/${nav.icon}.png`)}}
                   selectedIcon={{uri: require(`./nav/${nav.icon}-selected.png`)}}

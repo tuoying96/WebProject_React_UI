@@ -10,6 +10,7 @@ import Register from './containers/register/register'
 import Main from './containers/main/main'
 
 import './assets/css/index.less'
+// import './test/socketio_test'
 
 // const Login = withRouter(lazy(() => import('./containers/login/login')));
 // const Register = withRouter(lazy(() => import('./containers/register/register')));
