@@ -2,15 +2,14 @@
 
 #### Project Name: 
 **NEU Find My Roommate**
-**Member:** Ying Tuo, Jiahui He, Zhenke Xi, Kuanwei Huang  
 **Heroku Link:** of our application: https://findmyroommate.herokuapp.com/  
 
 #### Project Goal:
 Our goal is to help students in NEU to match roommates with each other. You can show your personal information on our application site and list your requirements for your potential roommates. Once you find some interesting people, you can start chatting with him/her.  
 
 #### Development Repositories:
-UI server link: <https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_FateFour_UI>   
-API server link: <https://github.ccs.neu.edu/NEU-CS5610-SU20/GroupProject_FateFour_API>  
+UI server link: <https://github.com/tuoying96/WebProject_React_UI>   
+API server link: <https://github.com/tuoying96/WebProject_React_API> 
 
 
 ## Iter 3
